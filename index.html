@@ -1,559 +1,257 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suraj Prakash Singh | Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Suraj Prakash Singh - Full Stack Developer skilled in React.js, Node.js, Express.js and MongoDB." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#0f172a',
+            darker: '#020617',
+            primary: '#0ea5e9',
+            secondary: '#7e22ce'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-dark text-slate-200">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-darker/80 backdrop-blur-sm z-50 shadow-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold gradient-text">Portfolio</a>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="text-slate-200 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link active">Home</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </div>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
-                <a href="#home" class="block py-2 nav-link active">Home</a>
-                <a href="#about" class="block py-2 nav-link">About</a>
-                <a href="#skills" class="block py-2 nav-link">Skills</a>
-                <a href="#projects" class="block py-2 nav-link">Projects</a>
-                <a href="#contact" class="block py-2 nav-link">Contact</a>
-            </div>
+  <nav class="fixed w-full bg-darker/90 backdrop-blur-sm z-50 shadow-lg border-b border-slate-800">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <a href="#home" class="text-2xl font-bold gradient-text">Portfolio</a>
+        <button id="menu-toggle" class="md:hidden text-slate-200 hover:text-primary focus:outline-none" aria-label="Open menu">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+        <div class="hidden md:flex space-x-7">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#certifications" class="nav-link">Certificate</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </div>
-    </nav>
-    
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-20">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-            <div class="md:w-1/2 mb-12 md:mb-0">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">Suraj Prakash Singh</span></h1>
-                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-slate-300">Full Stack Developer</h2>
-                <p class="text-lg mb-8 text-slate-400 max-w-lg">
-                    Dedicated to crafting fast, secure, and visually engaging web applications using the MERN stack, delivering solutions that combine performance with exceptional user experience.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#contact" class="px-6 py-3 rounded-full btn-primary font-medium">Hire Me</a>
-                    <a href="#projects" class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition">View Work</a>
-                    <a href="assets/SURAJ PRAKASH SINGH RESUME.pdf"class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition">Resume</a>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 space-y-2">
+        <a href="#home" class="block py-2 nav-link active">Home</a>
+        <a href="#about" class="block py-2 nav-link">About</a>
+        <a href="#skills" class="block py-2 nav-link">Skills</a>
+        <a href="#projects" class="block py-2 nav-link">Projects</a>
+        <a href="#certifications" class="block py-2 nav-link">Certificate</a>
+        <a href="#contact" class="block py-2 nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-                </div>
-                <div class="flex mt-8 space-x-4">
-                    <a href="https://github.com/suraxj" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/surajsingh49/" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://twitter.com/@Surajprakash49" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-400">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-                    <div class="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary blur-xl opacity-20"></div>
-                    <img src="assets/suraj photo formal.jpg" 
-                         alt="Profile" 
-                         class="relative w-full h-full object-cover rounded-full border-4 border-slate-800 floating">
-                </div>
-            </div>
+  <section id="home" class="min-h-screen flex items-center pt-24">
+    <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-primary font-semibold mb-3">Hello, I am</p>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Suraj Prakash <span class="gradient-text">Singh</span></h1>
+        <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-slate-300">Full Stack Developer | MERN Stack</h2>
+        <p class="text-lg mb-8 text-slate-400 max-w-xl">
+          I build responsive, secure, and user-friendly web applications using React.js, Node.js, Express.js, MongoDB, and modern JavaScript. I am eager to contribute as a fresher and solve real-world problems through clean code.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#projects" class="px-6 py-3 rounded-full btn-primary font-medium">View Projects</a>
+          <a href="assets/SURAJ PRAKASH SINGH RESUME.pdf" target="_blank" class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition">Download Resume</a>
+          <a href="#contact" class="px-6 py-3 rounded-full border border-slate-600 text-slate-200 font-medium hover:border-primary hover:text-primary transition">Contact Me</a>
         </div>
-    </section>
-    
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-darker">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="gradient-text">Me</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
-                    <div class="relative w-64 h-64">
-                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary to-secondary blur-xl opacity-20"></div>
-                        <img src="assets/WhatsApp Image 2025-09-18 at 10.01.23.jpeg" 
-                             alt="About" 
-                             class="relative w-full h-full object-cover rounded-2xl border-4 border-slate-800">
-                    </div>
-                </div>
-                
-                <div class="md:w-2/3 md:pl-12">
-                    <h3 class="text-2xl font-bold mb-6">Who am I?</h3>
-                    <p class="text-slate-400 mb-6">
-                       I'm a passionate Full Stack Developer dedicated to building modern, responsive, and scalable web applications. With hands-on experience in HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB, and SQL, I enjoy turning ideas into efficient, user-friendly digital solutions while continuously learning and improving my skills.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                        <div>
-                            <h4 class="font-semibold mb-2">Name: <span class="text-slate-300">Suraj Prakash Singh</span></h4>
-                            <h4 class="font-semibold mb-2">Email: <span class="text-slate-300">prakashsinghsuraj69@gmail.com</span></h4>
-                            <h4 class="font-semibold mb-2">Phone: <span class="text-slate-300">9355430343</span></h4>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold mb-2">Age: <span class="text-slate-300">23</span></h4>
-                            <h4 class="font-semibold mb-2">Experience: <span class="text-slate-300">Fresher</span></h4>
-                            <h4 class="font-semibold mb-2">Location: <span class="text-slate-300">New Delhi, Delhi</span></h4>
-                        </div>
-                    </div>
-                    
-                    <div class="flex space-x-4">
-                         
-                        <a href="#contact" class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition">Contact Me</a>
-                    </div>
-                </div>
-            </div>
+        <div class="flex mt-8 space-x-4">
+          <a href="https://github.com/suraxj" target="_blank" class="social-icon text-xl w-11 h-11 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/surajsingh49/" target="_blank" class="social-icon text-xl w-11 h-11 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:prakashsinghsuraj69@gmail.com" class="social-icon text-xl w-11 h-11 flex items-center justify-center rounded-full bg-slate-800 hover:bg-secondary" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
-    </section>
-    
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-dark">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="gradient-text">Skills</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Technical Skills</h3>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium">HTML</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium">CSS</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium">JAVASCRIPT</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium">REACT.JS</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium">NODE.JS</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium">EXPRESS.JS</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium">MONGODB</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium">SQL</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Professional Skills</h3>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium">Communication</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium">Teamwork</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium">Problem Solving</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-medium">Creativity</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Tools & Technologies -->
-            <div class="mt-16">
-                <h3 class="text-2xl font-bold mb-8 text-center">Tools & <span class="gradient-text">Technologies</span></h3>
-                
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
-                        <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
-                        <span>HTML5</span>
-                    </div>
-                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
-                        <i class="fab fa-css3-alt text-4xl text-blue-500 mb-2"></i>
-                        <span>CSS3</span>
-                    </div>
-                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
-                        <i class="fab fa-react text-4xl text-blue-600 mb-2"></i>
-                        <span>REACT.JS</span>
-                    </div>
-                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
-                        <i class="fas fa-database text-4xl text-green-500 mb-2"></i>
-                        <span>SQL</span>
-                    </div>
-                   <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
-                        <i class="fab fa-js text-4xl text-yellow-400 mb-2"></i>
-                        <span>JAVASCRIPT</span>
-                    </div>
-                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
-                        <i class="fab fa-node-js text-4xl text-green-500 mb-2"></i>
-                        <span>NODE.JS</span>
-                    </div>
-
-                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
-                    <i class="fas fa-server text-4xl text-gray-300 mb-2"></i>
-                    <span>EXPRESS.JS</span>
-                    </div>
-
-                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
-                    <i class="fas fa-database text-4xl text-green-600 mb-2"></i>
-                    <span>MONGODB</span>
-                    </div>
-                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
-                        <i class="fab fa-git-alt text-4xl text-orange-600 mb-2"></i>
-                        <span>Git</span>
-                    </div>
-                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
-                        <i class="fas fa-terminal text-4xl text-gray-300 mb-2"></i>
-                        <span>VS Code</span>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="relative w-72 h-72 md:w-96 md:h-96">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary blur-2xl opacity-30"></div>
+          <img src="assets/suraj photo formal.jpg" alt="Suraj Prakash Singh" class="relative w-full h-full object-cover rounded-full border-4 border-slate-800 floating" />
         </div>
-    </section>
-    
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-darker">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="gradient-text">Projects</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="project-card rounded-xl overflow-hidden card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9?q=80&w=1039&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                             alt="Project 1" 
-                             class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">KANBAN APP</h3>
-                        <p class="text-slate-400 mb-4">
-                            I built a Kanban Task Management App using React.js, Tailwind CSS, Context API, and dnd-kit..
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">HTML</span>
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">CSS</span>
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">JavaScript</span>
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">React.js</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="https://kanban-board-0a65ee.netlify.app/" class="text-primary hover:text-secondary">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/suraxj/kanban-app" class="text-primary hover:text-secondary">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                 <div class="project-card rounded-xl overflow-hidden card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://plus.unsplash.com/premium_photo-1684444605542-93725082d214?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                             alt="Project 1" 
-                             class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">NOTES APP</h3>
-                        <p class="text-slate-400 mb-4">
-                            I developed a Notes App using React.js and Tailwind CSS.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">HTML</span>
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">CSS</span>
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">JavaScript</span>
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">React.js</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="https://notes-app-46687e.netlify.app/" class="text-primary hover:text-secondary">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/suraxj/Notes--App" class="text-primary hover:text-secondary">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                 <div class="project-card rounded-xl overflow-hidden card-hover">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                             alt="Project 2" 
-                             class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">LMS</h3>
-                        <p class="text-slate-400 mb-4">
-                            I developed a MERN-based Learning Management System
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">HTML</span>
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">CSS</span>
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">JavaScript</span>
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">React.js</span>
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Node.js</span>
-                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">MongoDB</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="https://learning-management-system-frontend-alpha.vercel.app/" class="text-primary hover:text-secondary">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/suraxj/Learning-management-system" class="text-primary hover:text-secondary">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            <div class="text-center mt-12">
-                <a href="https://github.com/suraxj?tab=repositories" class="px-8 py-3 rounded-full btn-primary font-medium inline-flex items-center">
-                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-darker">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+        <div class="flex justify-center">
+          <img src="assets/WhatsApp Image 2025-09-18 at 10.01.23.jpeg" alt="About Suraj" class="w-72 h-72 object-cover rounded-2xl border-4 border-slate-800 shadow-xl" />
         </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-dark">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+        <div class="lg:col-span-2">
+          <h3 class="text-2xl font-bold mb-5">Full Stack Developer focused on practical MERN projects</h3>
+          <p class="text-slate-400 mb-6 leading-relaxed">
+            I have completed Full Stack Development training and have hands-on knowledge of frontend and backend development. I enjoy creating clean UI, building REST APIs, integrating databases, and deploying full-stack applications.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div class="info-card"><strong>Name:</strong> Suraj Prakash Singh</div>
+            <div class="info-card"><strong>Email:</strong> prakashsinghsuraj69@gmail.com</div>
+            <div class="info-card"><strong>Role:</strong> Full Stack Developer</div>
+            <div class="info-card"><strong>Location:</strong> New Delhi, India</div>
+            <div class="info-card"><strong>Experience:</strong> Fresher</div>
+            <div class="info-card"><strong>Availability:</strong> Open to opportunities</div>
+          </div>
+          <a href="#contact" class="px-6 py-3 rounded-full btn-primary font-medium inline-block">Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-20 bg-dark">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="skill-category"><h3>Frontend</h3><p>HTML5, CSS3, JavaScript, React.js, Tailwind CSS, Responsive Design</p></div>
+        <div class="skill-category"><h3>Backend</h3><p>Node.js, Express.js, REST APIs, JWT Authentication, Middleware</p></div>
+        <div class="skill-category"><h3>Database</h3><p>MongoDB, Mongoose, SQL, CRUD Operations, Data Modeling</p></div>
+        <div class="skill-category"><h3>Tools</h3><p>Git, GitHub, VS Code, Postman, Vercel, Netlify, Render</p></div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-5 mt-12">
+        <div class="tool-card"><i class="fab fa-html5 text-orange-500"></i><span>HTML</span></div>
+        <div class="tool-card"><i class="fab fa-css3-alt text-blue-500"></i><span>CSS</span></div>
+        <div class="tool-card"><i class="fab fa-js text-yellow-400"></i><span>JavaScript</span></div>
+        <div class="tool-card"><i class="fab fa-react text-blue-400"></i><span>React</span></div>
+        <div class="tool-card"><i class="fab fa-node-js text-green-500"></i><span>Node</span></div>
+        <div class="tool-card"><i class="fas fa-server text-gray-300"></i><span>Express</span></div>
+        <div class="tool-card"><i class="fas fa-database text-green-600"></i><span>MongoDB</span></div>
+        <div class="tool-card"><i class="fas fa-database text-sky-400"></i><span>SQL</span></div>
+        <div class="tool-card"><i class="fab fa-git-alt text-orange-600"></i><span>Git</span></div>
+        <div class="tool-card"><i class="fab fa-github text-gray-200"></i><span>GitHub</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-20 bg-darker">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="section-title">MERN Stack <span class="gradient-text">Projects</span></h2>
+        <p class="text-slate-400 mt-4 max-w-3xl mx-auto">Each project includes title, description, tech stack, deployed URL, and Code links.</p>
+        <div class="title-line"></div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <article class="project-card rounded-xl overflow-hidden card-hover">
+          <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1170&auto=format&fit=crop" alt="Learning Management System" class="w-full h-52 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3">Learning Management System</h3>
+            <p class="text-slate-400 mb-4">A complete MERN-based LMS where users can browse courses/books, manage learning resources, authenticate securely, and admins can manage content and users.</p>
+            <div class="tech-list"><span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>JWT</span><span>Tailwind CSS</span></div>
+            <div class="project-links">
+              <a href="https://learning-management-system-frontend-alpha.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/suraxj/Learning-management-system" target="_blank"><i class="fab fa-github"></i> Code</a>
             </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-                    <p class="text-slate-400 mb-8">
-                        Feel free to reach out to me for any questions or opportunities. 
-                        I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="bg-slate-800 p-3 rounded-full mr-4">
-                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">Location</h4>
-                                <p class="text-slate-400">New Delhi,Delhi</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-slate-800 p-3 rounded-full mr-4">
-                                <i class="fas fa-envelope text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">Email</h4>
-                                <p class="text-slate-400">prakashsinghsuraj69@gmail.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-slate-800 p-3 rounded-full mr-4">
-                                <i class="fas fa-phone-alt text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">Phone</h4>
-                                <p class="text-slate-400">9355430343</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8">
-                        <h4 class="font-bold mb-4">Follow Me</h4>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/suraxj" class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary">
-                                <i class="fab fa-github text-xl"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/surajsingh49/" class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600">
-                                <i class="fab fa-linkedin-in text-xl"></i>
-                            </a>
-                            <a href="https://x.com/Surajprakash49" class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-400">
-                                <i class="fab fa-twitter text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
-                    <form action="https://formsubmit.co/prakashsinghsuraj69@gmail.com" method="POST" class="space-y-6">
+          </div>
+        </article>
+        <article class="project-card rounded-xl overflow-hidden card-hover">
+          <img src="https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9?q=80&w=1039&auto=format&fit=crop" alt="Kanban App" class="w-full h-52 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3">Kanban Task Management App</h3>
+            <p class="text-slate-400 mb-4">A productivity app for creating, updating, deleting, and organizing tasks with drag-and-drop workflow across To Do, In Progress, and Done columns.</p>
+            <div class="tech-list"><span>React.js</span><span>Tailwind CSS</span><span>Context API</span><span>dnd-kit</span><span>LocalStorage</span></div>
+            <div class="project-links">
+              <a href="https://kanban-board-0a65ee.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/suraxj/kanban-app" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card rounded-xl overflow-hidden card-hover">
+          <img src="https://plus.unsplash.com/premium_photo-1684444605542-93725082d214?q=80&w=1170&auto=format&fit=crop" alt="Notes App" class="w-full h-52 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3">Notes Management App</h3>
+            <p class="text-slate-400 mb-4">A notes application with create, edit, delete, search, tags, pin, archive, and trash features, designed for managing personal notes efficiently.</p>
+            <div class="tech-list"><span>React.js</span><span>Tailwind CSS</span><span>LocalStorage</span></div>
+            <div class="project-links">
+              <a href="https://notes-app-46687e.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/suraxj/Notes--App" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+  <section id="certifications" class="py-20 bg-dark">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="section-title">My <span class="gradient-text">Certifications</span></h2>
+        <p class="text-slate-400 mt-4">Relevant certificates for Full Stack Development and web technologies.</p>
+        <div class="title-line"></div>
+      </div>
+      <div class="grid grid-cols-1 gap-6">
+        <div class="certificate-card"><i class="fas fa-certificate"></i><h3>GUVI Full Stack Development</h3><p>Full Stack Development program completion certificate.</p><a href="https://www.zenclass.in/certificateDownload/UnBMnfcDIoHD6Kz3" target="_blank">Certificate Link</a></div>
+      </div>
+    </div>
+  </section>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <section id="contact" class="py-20 bg-darker">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="text-slate-400 mt-4">Open to fresher Full Stack Developer opportunities.</p>
+        <div class="title-line"></div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
-            <label for="name" class="block mb-2 font-medium">Your Name</label>
-            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none" required>
+          <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+          <p class="text-slate-400 mb-8">Feel free to contact me for job opportunities, internships, project discussions, or collaboration.</p>
+          <div class="space-y-5">
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h4>Location</h4><p>New Delhi, India</p></div></div>
+            <div class="contact-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><p><a href="mailto:prakashsinghsuraj69@gmail.com">prakashsinghsuraj69@gmail.com</a></p></div></div>
+            <div class="contact-item"><i class="fas fa-phone-alt"></i><div><h4>Phone</h4><p>9355430343</p></div></div>
+          </div>
+          <div class="flex space-x-4 mt-8">
+            <a href="https://github.com/suraxj" target="_blank" class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary"><i class="fab fa-github text-xl"></i></a>
+            <a href="https://www.linkedin.com/in/surajsingh49/" target="_blank" class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600"><i class="fab fa-linkedin-in text-xl"></i></a>
+            <a href="mailto:prakashsinghsuraj69@gmail.com" class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-secondary"><i class="fas fa-envelope text-xl"></i></a>
+          </div>
         </div>
-
         <div>
-            <label for="email" class="block mb-2 font-medium">Your Email</label>
-            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none" required>
-        </div>
-    </div>
-
-    <div>
-        <label for="subject" class="block mb-2 font-medium">Subject</label>
-        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none" required>
-    </div>
-
-    <div>
-        <label for="message" class="block mb-2 font-medium">Message</label>
-        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none" required></textarea>
-    </div>
-
-    <button type="submit" class="px-8 py-3 rounded-full btn-primary font-medium w-full">
-        Send Message <i class="fas fa-paper-plane ml-2"></i>
-    </button>
-</form>
-                </div>
+          <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+          <form action="https://formsubmit.co/prakashsinghsuraj69@gmail.com" method="POST" class="space-y-6">
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input type="text" name="name" placeholder="Your Name" class="contact-input" required />
+              <input type="email" name="email" placeholder="Your Email" class="contact-input" required />
             </div>
+            <input type="text" name="subject" placeholder="Subject" class="contact-input" required />
+            <textarea name="message" rows="5" placeholder="Message" class="contact-input" required></textarea>
+            <button type="submit" class="px-8 py-3 rounded-full btn-primary font-medium w-full">Send Message <i class="fas fa-paper-plane ml-2"></i></button>
+          </form>
         </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="bg-darker py-12">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <a href="#" class="text-2xl font-bold gradient-text">Portfolio</a>
-                    <p class="text-slate-400 mt-2">© 2026 Suraj Prakash Singh. All rights reserved.</p>
-                </div>
-                
-                <div class="flex space-x-6">
-                    <a href="https://github.com/suraxj" class="text-slate-400 hover:text-primary transition">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/surajsingh49/" class="text-slate-400 hover:text-blue-600 transition">
-                        <i class="fab fa-linkedin-in text-xl"></i>
-                    </a>
-                    <a href="https://x.com/Surajprakash49" class="text-slate-400 hover:text-blue-400 transition">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500">
-                <p>Made with <i class="fas fa-heart text-red-500"></i> and lots of <i class="fas fa-coffee text-amber-500"></i></p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg hidden">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    <script src="script.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-darker py-10 border-t border-slate-800">
+    <div class="container mx-auto px-6 text-center">
+      <a href="#home" class="text-2xl font-bold gradient-text">Portfolio</a>
+      <p class="text-slate-400 mt-3">© 2026 Suraj Prakash Singh | Full Stack Developer</p>
+      <div class="flex justify-center space-x-6 mt-5">
+        <a href="https://github.com/suraxj" target="_blank" class="text-slate-400 hover:text-primary"><i class="fab fa-github text-xl"></i></a>
+        <a href="https://www.linkedin.com/in/surajsingh49/" target="_blank" class="text-slate-400 hover:text-primary"><i class="fab fa-linkedin-in text-xl"></i></a>
+        <a href="mailto:prakashsinghsuraj69@gmail.com" class="text-slate-400 hover:text-primary"><i class="fas fa-envelope text-xl"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg hidden" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <script src="script.js"></script>
 </body>
 </html>
