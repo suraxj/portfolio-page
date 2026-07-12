@@ -6,7 +6,7 @@ export const profile = {
   lastName: 'Singh',
   title: 'Full Stack Developer | MERN Stack',
   tagline:
-    'I build responsive, secure, and user-friendly web applications using React.js, Node.js, Express.js, MongoDB, and modern JavaScript. I am eager to contribute as a fresher and solve real-world problems through clean code.',
+    'I build responsive, secure, and user-friendly web applications using React.js, Node.js, Express.js, MongoDB, and modern JavaScript. As a passionate Full Stack Developer, I enjoy creating scalable and efficient solutions with clean, maintainable code while continuously learning new technologies and best practices.',
   email: 'prakashsinghsuraj69@gmail.com',
   phone: '9355430343',
   location: 'New Delhi, India',
@@ -60,11 +60,11 @@ export const tools = [
   { icon: 'fab fa-js', color: 'text-yellow-400', label: 'JavaScript' },
   { icon: 'fab fa-react', color: 'text-blue-400', label: 'React' },
   { icon: 'fab fa-node-js', color: 'text-green-500', label: 'Node' },
-  { icon: 'fas fa-server', color: 'text-gray-300', label: 'Express' },
+  { icon: 'fas fa-server', color: 'text-slate-600', label: 'Express' },
   { icon: 'fas fa-database', color: 'text-green-600', label: 'MongoDB' },
-  { icon: 'fas fa-database', color: 'text-sky-400', label: 'SQL' },
+  { icon: 'fas fa-database', color: 'text-sky-600', label: 'SQL' },
   { icon: 'fab fa-git-alt', color: 'text-orange-600', label: 'Git' },
-  { icon: 'fab fa-github', color: 'text-gray-200', label: 'GitHub' },
+  { icon: 'fab fa-github', color: 'text-slate-800', label: 'GitHub' },
 ];
 
 export const projects = [

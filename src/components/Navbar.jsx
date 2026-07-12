@@ -20,7 +20,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed w-full bg-darker/90 backdrop-blur-sm z-50 shadow-lg border-b border-slate-800">
+    <nav className="fixed w-full bg-white/70 backdrop-blur-md z-50 shadow-sm border-b border-slate-200/50">
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <a href="#home" className="text-2xl font-bold gradient-text">
@@ -28,7 +28,7 @@ export default function Navbar() {
           </a>
           <button
             onClick={() => setMenuOpen((v) => !v)}
-            className="md:hidden text-slate-200 hover:text-primary focus:outline-none"
+            className="md:hidden text-slate-800 hover:text-primary focus:outline-none"
             aria-label="Open menu"
           >
             <i className="fas fa-bars text-2xl"></i>
