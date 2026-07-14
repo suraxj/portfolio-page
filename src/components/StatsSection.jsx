@@ -64,7 +64,7 @@ export default function StatsSection() {
     { label: 'MERN Stack Apps', value: '4', suffix: '+' },
     { label: 'Hours Coded', value: '1200', suffix: '+' },
     { label: 'GitHub Commits', value: '10', suffix: '+' },
-    { label: 'Cups of Coffee', value: '1500', suffix: ' ☕' },
+    { label: 'Cups of Coffee☕', value: '1500', suffix: ' +' },
   ];
 
   return (
