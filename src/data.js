@@ -79,14 +79,15 @@ export const projects = [
     code: 'https://github.com/suraxj/Learning-management-system',
   },
   {
-    title: 'Kanban Task Management App',
+    title: 'Weather App',
     image:
-      'https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9?q=80&w=1039&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1574780986957-74f4ee225b87?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fHdlYXRoZXIlMjBmb3JlY2FzdHxlbnwwfHwwfHx8MA%3D%3D',
     description:
-      'A productivity app for creating, updating, deleting, and organizing tasks with drag-and-drop workflow across To Do, In Progress, and Done columns.',
-    tech: ['React.js', 'Tailwind CSS', 'Context API', 'dnd-kit', 'LocalStorage'],
-    demo: 'https://kanban-board-0a65ee.netlify.app/',
-    code: 'https://github.com/suraxj/kanban-app',
+      'A weather forecast app that provides real-time weather information and predictions for various locations.',
+    tech: ['React.js', 'Tailwind CSS', 'TypeScript', 'Open-Meteo APIs'],
+
+    demo: 'https://weather-app-three-pi-66.vercel.app/',
+    code: 'https://github.com/suraxj/Weather-App',
   },
   {
     title: 'Notes Management App',
