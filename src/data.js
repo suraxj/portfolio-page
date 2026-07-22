@@ -92,7 +92,7 @@ export const projects = [
   {
     title: 'Notes Management App',
     image:
-      'https://plus.unsplash.com/premium_photo-1684444605542-93725082d214?q=80&w=1170&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1600783245891-f275a1575d93?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description:
       'A notes application with create, edit, delete, search, tags, pin, archive, and trash features, designed for managing personal notes efficiently.',
     tech: ['React.js', 'Tailwind CSS', 'LocalStorage'],
